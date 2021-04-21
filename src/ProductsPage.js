@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Product from './Product.js';
 
-function ProductsPage() {
+function ProductsPage({ products }) {
   return (
     <>
-      <h1>Products</h1>
+      <div className='row'>
+        <h1 className='text-center'>Products</h1>
+      </div>
+      <div className='row'>
+        {products.map((product, index) => <Product product={product} key={index}></Product>)}
+      </div>
     </>
   );
 }
