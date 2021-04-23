@@ -6,6 +6,7 @@ import ProductsPage from './ProductsPage.js';
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
   
   const getProducts = () => {
     let url = 'https://awesomeincbootcampapi-ianrios529550.codeanyapp.com/api/store/products';
@@ -16,14 +17,29 @@ function App() {
       .catch(function (error) {
         console.log(error);
       })
-    
   }
   
   useEffect(getProducts, []);
   
+  const showProductPage = (product) => {
+    
+  }
+  
+  const addToCart = (product, quantity) => {
+    
+  }
+  
+  const removeFromCart = (product, quantity) => {
+    
+  }
+  
+  const showCart = () => {
+    
+  }
+  
   return (
     <>
-      <div className='container'>
+      <div className='container-fluid'>
         <ProductsPage products={products}></ProductsPage>
       </div>
     </>
